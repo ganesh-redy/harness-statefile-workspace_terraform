@@ -1,0 +1,25 @@
+provider "google" {
+  project = sam-458313
+  zone    = "us-central1-a"
+}
+
+resource "google_compute_instance" "vm_instance" {
+  name         = "example-instance"
+  machine_type = "e2-micro"
+  zone         = "us-central1-a"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-12"
+    }
+  }
+
+  network_interface {
+    network       = "default"
+    access_config {}  # Needed for external IP
+  }
+
+
+
+  tags = ["web"]
+}
