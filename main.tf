@@ -1,6 +1,7 @@
 provider "google" {
-  project = sam-458313
-  zone    = "us-central1-a"
+  project     = "sam-458313"
+  zone        = "us-central1-a"
+  credentials = file("$PWD/gcp.json")
 }
 
 resource "google_compute_instance" "vm_instance" {
@@ -18,8 +19,6 @@ resource "google_compute_instance" "vm_instance" {
     network       = "default"
     access_config {}  # Needed for external IP
   }
-
-
 
   tags = ["web"]
 }
