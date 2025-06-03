@@ -2,7 +2,7 @@ provider "google" {
   project     = "sam-458313"
   region      = "us-central1"
   zone        = "us-central1-a"
-  credentials = file("/tmp/gcp.json")
+  credentials = file("gcp.json")
 }
 
 resource "google_compute_instance" "vm_instance" {
