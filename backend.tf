@@ -1,10 +1,10 @@
 terraform {
   backend "http" {
-    address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/infra/terraform-backend?accountIdentifier=XysRW5l3T2edHIhC0X2XdA"
+    address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/terraformokay/terraform-backend?accountIdentifier=0PhQdAcEQcCLXQFhDptS_g"
     username = "harness"
-    lock_address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/infra/terraform-backend/lock?accountIdentifier=XysRW5l3T2edHIhC0X2XdA"
+    lock_address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/terraformokay/terraform-backend/lock?accountIdentifier=0PhQdAcEQcCLXQFhDptS_g"
     lock_method = "POST"
-    unlock_address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/infra/terraform-backend/lock?accountIdentifier=XysRW5l3T2edHIhC0X2XdA"
+    unlock_address = "https://app.harness.io/gateway/iacm/api/orgs/default/projects/default_project/workspaces/terraformokay/terraform-backend/lock?accountIdentifier=0PhQdAcEQcCLXQFhDptS_g"
     unlock_method = "DELETE"
   }
 }
